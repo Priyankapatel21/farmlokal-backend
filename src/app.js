@@ -30,9 +30,9 @@ app.get("/redis-test", async (req, res) => {
   res.json({ redis: val });
 });
 
-// 🔐 MOCK OAUTH TOKEN ENDPOINT
+// MOCK OAUTH TOKEN ENDPOINT
 app.post("/mock/oauth/token", (req, res) => {
-  console.log("✅ MOCK OAUTH HIT");
+  console.log("MOCK OAUTH HIT");
   res.json({
     access_token: "mock_access_token_" + Date.now(),
     expires_in: 3600,
@@ -40,7 +40,7 @@ app.post("/mock/oauth/token", (req, res) => {
   });
 });
 
-// 🌐 MOCK EXTERNAL API
+// MOCK EXTERNAL API
 app.get("/mock/external/api", (req, res) => {
   res.json({
     status: "success",
